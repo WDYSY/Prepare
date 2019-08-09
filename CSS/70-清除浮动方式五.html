@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: pink;
+            /* 利用overflow */
+            overflow: hidden;
+        }
+        .box2{
+            background-color: yellowgreen;
+        }
+        .box1 p{
+            width: 100px;
+            background-color: bisque;
+            float: left;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: gold;
+            float: left;
+        }
+        .box1{
+            /* 为了兼容IE6及以下版本 */
+            *zoom: 1;
+        }
+        .div1{
+            height: 300px;
+            width: 300px;
+            background-color: darkcyan;
+            overflow: hidden;
+            display: block;
+            clear: both;
+            /* margin-top失效了，伪元素也失效了 */
+            /* margin-top: 10px; */
+        }
+        .div2{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(243, 229, 38);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>我是文字</p>
+        <p>我是文字</p>
+        <p>我是文字</p>
+    </div>
+    <div class="box2">
+        <p>我是文字</p>
+        <p>我是文字</p>
+        <p>我是文字</p>
+    </div>
+    <div class="div1">
+        <div class="div2">overflow和margin-top，不用boder</div>
+    </div>
+</body>
+</html>

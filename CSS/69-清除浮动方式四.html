@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: pink;
+        }
+        /* 清除浮动方式四：伪元素+内墙法 */
+        .box1::after{
+            content: "";
+            height: 0;
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+        .box2{
+            background-color: yellowgreen;
+        }
+        .box1 p{
+            width: 100px;
+            background-color: bisque;
+            float: left;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: gold;
+            float: left;
+        }
+        .box1{
+            /* 为了兼容IE6及以下版本 */
+            *zoom: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>我是文字</p>
+        <p>我是文字</p>
+        <p>我是文字</p>
+    </div>
+    <div class="box2">
+        <p>我是文字</p>
+        <p>我是文字</p>
+        <p>我是文字</p>
+    </div>
+</body>
+</html>

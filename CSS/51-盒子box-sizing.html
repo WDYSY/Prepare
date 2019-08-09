@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .root{
+            height: 300px;
+            width: 300px;
+            background: gray;
+        }
+        .div1{
+            height: 100px;
+            width: 100px;
+            background: gold;
+            float: left;
+        }
+        .div2{
+            box-sizing: border-box;
+            height: 200px;
+            width: 200px;
+            background: white;
+            float: right;
+            padding: 20px;
+            border: 5px solid sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1、CSS3中新增了一个box-sizing属性，
+        这个属性可以保证我们给盒子新增
+        padding&border之后，盒子元素
+        的宽度和高度不变
+        2、box-sizing的两个取值：content-box  border-box
+     -->
+    <div class="root">
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </div>
+</body>
+</html>

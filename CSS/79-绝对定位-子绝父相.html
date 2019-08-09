@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            height: 50px;
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        ul li{
+            /* height: 50px; */
+            width: 100px;
+            line-height: 50px;
+            background-color: grey;
+            /* border: 1px solid #000; */
+            float: left;
+            text-align: center;
+        }
+         ul li:nth-of-type(4){
+            /* background-color: yellow; */
+            position: relative;
+        } 
+        ul li img{
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            /* top:-10px;
+            left: 40px; */
+            top:-10%;
+            left:40%;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4
+        <img src="src\hot.png" alt="">
+    </li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>    
+</body>
+</html>

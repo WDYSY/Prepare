@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 1 */
+        /* div,h1,p{
+            border: 1px solid #000;
+        }
+        span,strong,b{
+            border: 1px solid #000;
+        } */
+        /* 2 浮动流 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            height: 100px;
+            width: 100px;
+            background: red;
+            border: 1px solid #000;
+            display: inline-block;
+            float: left;
+        }
+        #div2{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            border: 1px solid #000;
+            display: inline-block;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 什么是网页的布局方式
+        1、标准流（文档流、普通流）排版方式
+        1.1默认排版方法
+        1.2在CSS中将元素分为三类，分别是：
+            块级元素（独占一行）、
+            行内元素（不独占一行，不可以设置宽高）、
+            行内块级元素（不独占一行，可以设置宽高）
+        2、浮动流排版方式
+        1.2 浮动流是一种
+        3、定位流排版方式
+    -->
+
+    <!-- 1 -->
+    <!-- 以下是块级元素，所以会垂直排版 -->
+    <!-- <div>I'm div</div>
+    <h1>I'm h1</h1>
+    <p>I'm p</p> -->
+    <!-- 以下是行内、行内块级元素，所以会水平排版 -->
+   <!--  <span>I'm span</span>
+    <strong>I'm strong</strong>
+    <b>I'm bold</b> -->
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+</body>
+</html>

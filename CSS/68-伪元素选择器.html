@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>.
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 300px;
+            width: 300px;
+            border: 1px solid #000;
+            background-color: yellow;
+        }
+        div::before{
+            content:'爱你';
+            /* height: 50px;
+            width: 50px; */
+            height: 0;
+            background-color: pink;
+            display: block;
+            border: 1px solid white;
+            visibility: hidden;
+        }
+        div::after{
+            content:'么么哒';
+            /* height: 50px;
+            width: 50px; */
+            height: 0;
+            background-color: pink;
+            border: 1px solid white;
+            display: block;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        I'm word
+    </div>
+</body>
+</html>

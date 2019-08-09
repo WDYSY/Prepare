@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: pink;
+        }
+        .box2{
+            background-color: yellowgreen;
+        }
+        .box1 p{
+            width: 100px;
+            background-color: bisque;
+            float: left;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: gold;
+            float: left;
+        }
+        .outwall{
+            clear: both;
+            height: 10px;
+            background-color: red;
+            /* 两个div中间放一个div，
+            设置该div的clear属性为both和height，
+            而不是设置前后div的margin-top和margin-bottom */
+        }
+        .innerwall{
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>我是文字</p>
+        <p>我是文字</p>
+        <p>我是文字</p>
+        <div class="innerwall"></div>
+    </div>
+    <!-- <div class="outwall"></div> -->
+    <div class="box2">
+        <p>我是文字</p>
+        <p>我是文字</p>
+        <p>我是文字</p>
+        <div class="innerwall"></div>
+    </div>
+</body>
+</html>
