@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var str = 'apc gpc xpc opc bpc mpc zpc 0px';
+    /* 选择 */
+    // re = /[agx]pc/g;    //匹配
+    // re = /[a-x]pc/g;    //范围匹配
+    /* 排除 */
+    //re = /[^a-x]pc/g;    //范围匹配——除了什么，其它的都要
+    re = /[^a-x0-9]pc/g;    //a-x和0-9开头的都不要
+    alert(str.match(re));
+</script>
+<body>
+
+</body>
+</html>

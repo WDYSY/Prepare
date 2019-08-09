@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="./jquery-1.12.4.js"></script>
+<script src="./test.js"></script>
+<script>
+    // 0 出了$符号的冲突
+    /* $(function(){
+        alert("123")
+    }) */
+    // 1 释放$的使用权——释放之后就不能用$了
+    /* jQuery.noConflict()
+    jQuery(function(){
+        alert('123')
+    }) */
+    //2 自定义一个访问符号
+    var nj = jQuery.noConflict();
+    nj(function(){
+        alert('123')
+    })
+    
+</script>
+<body>
+    
+</body>
+</html>

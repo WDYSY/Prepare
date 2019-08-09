@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 input {background: white;}
+        #div1 input.active {background: yellow;}
+        #div1 div {width:200px; height: 200px; background: #cccccc; display:none;}
+    </style>
+</head>
+<script>
+    window.onload = function(){
+        var rootdiv = document.getElementById('div1');
+        var dBtn = rootdiv.getElementsByTagName('input');
+        var aDiv = rootdiv.getElementsByTagName('div');
+        for(var i=0;i<dBtn.length;i++){
+            dBtn[i].index = i;
+            dBtn[i].onclick=function(){
+                for(var j=0;j<dBtn.length;j++){
+                    dBtn[j].className = '';
+                    aDiv[j].style.display = 'none';
+                }
+                this.className = 'active';
+                console.log(i)
+                console.log(this.index)
+                aDiv[this.index].style.display = 'block';   //为何不能直接用i？
+            }
+        }
+    }
+</script>
+<body>
+    <div id='div1'>
+        <input class='active' type="button" value="aaa">
+        <input type="button" value="bbb">
+        <input type="button" value="ccc">
+        <div style="display: block">aaaaaaaaaaaa</div>
+        <div>bbbbbbbbbbbb</div>
+        <div>cccccccccccc</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="115d1368-6a6b-4669-96f2-b44fda0e19d8" name="Apache" url="http://localhost:8080">
+        <fileTransfer port="0" mountedRoot="F:\Web\19sqw3\JQuery\chushi\135-\data" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

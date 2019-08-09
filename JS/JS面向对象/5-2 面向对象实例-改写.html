@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 input {
+            background: white;
+        }
+
+        #div1 input.active {
+            background: yellow;
+        }
+
+        #div1 div {
+            width: 200px;
+            height: 200px;
+            background: #cccccc;
+            display: none;
+        }
+    </style>
+</head>
+<script>
+    window.onload=function(){
+        new TabSwitch('div1');
+    }
+    /* step1 ：构造函数。window.onload相当于初始化的函数，现在要把它变成一个构造函数，把外面的函数变成对象的方法 */
+    // window.onload = function () {    
+    function TabSwitch(id) {
+        var _this = this;
+        var rootdiv = document.getElementById(id);
+        /* step 2: 把变量变成属性 */
+        this.dBtn = rootdiv.getElementsByTagName('input');
+        this.aDiv = rootdiv.getElementsByTagName('div');
+        for (var i = 0; i < this.dBtn.length; i++) {
+            this.dBtn[i].index = i;
+            this.dBtn[i].onclick = function(){
+                    _this.fnClick(this)
+                };
+        }
+    }
+    /* 函数变成方法 */
+    TabSwitch.prototype.fnClick = function (dBtn) {
+        for (var j = 0; j < this.dBtn.length; j++) {
+            this.dBtn[j].className = '';
+            this.aDiv[j].style.display = 'none';
+        }
+        dBtn.className = 'active';
+        this.aDiv[dBtn.index].style.display = 'block';   //为何不能直接用i？
+    }
+</script>
+
+<body>
+    <div id='div1'>
+        <input class='active' type="button" value="aaa">
+        <input type="button" value="bbb">
+        <input type="button" value="ccc">
+        <div style="display: block">aaaaaaaaaaaa</div>
+        <div>bbbbbbbbbbbb</div>
+        <div>cccccccccccc</div>
+    </div>
+</body>
+
+</html>

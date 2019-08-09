@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var obj = (function(n){
+        var a = n;  //不会暴露给外面
+        return {
+           b:function(){
+               console.log("b",a);
+           },
+           c:function(){
+               console.log("c")
+           }
+        }
+    })(5)
+    obj.b();
+</script>
+<body>
+    
+</body>
+</html>

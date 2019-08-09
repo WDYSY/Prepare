@@ -1,0 +1,4 @@
+视频地址：https://www.bilibili.com/video/av23831521?from=search&seid=11466328613770266121
+学习情况：（已学完）
+成功地跨域请求到了来自一个网址的数据。
+在vue项目中配置了axios，导入了axios，然后用了axios的get方法。

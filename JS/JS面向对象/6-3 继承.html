@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+/* 父级定义 */
+function A(){
+    this.abc = 122;
+}
+A.prototype.show = function(){
+    alert(this.abc)
+}
+
+function B(){
+    /* step 1：通过call继承父级的属性 */
+    /* 如何继承A函数——通过call */
+    //this->new B();
+    A.call(this);   //相当于把this传给了function A，然后替代了其中的this
+}
+//alert(obj1.abc);
+
+/* step 2 ：继承父级的方法 */
+//方式一
+// B.prototype = A.prototype;  //其实只是引用，而不是复制
+// 方式二
+for(var i in A.prototype){
+    B.prototype[i] = A.prototype[i];
+}
+B.prototype.newfn = function() {
+    alert("this funtion only belongs to B")
+}
+let obj0 = new A();
+let obj1 = new B();
+obj0.newfn();    //会发现obj0不能执行该函数
+
+</script>
+<body>
+    
+</body>
+</html>

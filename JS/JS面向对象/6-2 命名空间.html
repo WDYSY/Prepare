@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    /* 就是让同一个名称的函数互不冲突 */
+    var a = {};
+    a.b = {};
+    a.c = {};
+    a.d = {};
+    a.b.show = function(){
+        alert('a');
+    }
+    a.c.show = function(){
+        alert('b');
+    }
+    a.d.show = function(){
+        alert('c');
+    }
+    a.b.show();
+    a.c.show();
+    a.d.show();
+
+</script>
+<body>
+    
+</body>
+</html>

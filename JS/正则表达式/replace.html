@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'aab dca eab bba';
+        // alert(str.replace('a', '0'));    //只替换了第一个——replace不和正则一起用几乎没用
+        re = /a/g;
+        alert(str.replace(re, '0'));    //全部替换了
+    </script>
+</body>
+</html>

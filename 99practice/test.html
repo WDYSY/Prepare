@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .styleclass {width:200px; height:200px;background: yellow;}
+        .styleclass2 {width:100px; height:100px;background: yellowgreen;position: relative;}
+    </style>
+</head>
+<script>
+    window.onload = function (){
+        let oDiv = document.getElementById('div1');
+        //alert(oDiv.innerText)
+        // oDiv.setAttribute('value', 'world')
+        oDiv.setAttribute('class', 'styleclass')
+        div2 = document.createElement('div')
+        div2.value = '你好'
+        div2.setAttribute('class', 'styleclass2')
+        oDiv.appendChild(div2)
+    }
+</script>
+<body>
+    <div id="div1">hello</div>
+</body>
+</html>

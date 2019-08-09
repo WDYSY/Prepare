@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload =  function (ev) {
+            var btn = document.querySelector('button');
+            btn.onclick = function () {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("POST","08-ajax-post-base.php",true);
+                xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                xmlhttp.send("userName=Joann&userPwd=123");
+                xmlhttp.onreadystatechange = function(ev2){
+                    if(xmlhttp.readyState == 4){
+                        if(xmlhttp.status >=200 && xmlhttp.status<=300 || xmlhttp === 304){
+                            console.log('接到服务器的响应');
+                            alert(xmlhttp.responseText);
+                        }else{
+                            console.log('无响应');
+                        }
+                    }
+                }
+            }
+        }
+
+        /*HTTP状态码：200———300之间就是正常的*/
+    </script>
+</head>
+<body>
+<!--定义：在不刷新整个页面的情况下，刷新局部的网页-->
+<!--如淘宝的搜索框-->
+<button>请求</button>
+</body>
+</html>

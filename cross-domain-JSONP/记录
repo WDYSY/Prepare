@@ -1,0 +1,5 @@
+视频来源：
+https://www.bilibili.com/video/av37521924?from=search&seid=9227891835019042653
+
+方法：
+因为script不受同源策略的影响（而ajax会），可以模拟一个script来实现请求。

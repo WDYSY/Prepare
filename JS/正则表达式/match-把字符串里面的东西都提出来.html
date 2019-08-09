@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //match
+        var str = 'aa 11 bb 132 k 23 3j dljf';
+        /* 提取第一个数字 */
+        //re = /\d/; 
+        
+        /* 提取全部的数字，但是返回为一位数 */
+        //re = /\d/g; //g的含义是全局匹配——返回的是切成片的数字
+        
+        /* 提取两位数，一位数直接省略 */
+        // re = /\d\d/g; //g的含义是全局匹配——返回的是三位的数字
+
+        /* 提取未知位数 */
+        re = /\d+/g;    //——+号表示若干
+        alert(str.match(re))
+    </script>
+</body>
+</html>

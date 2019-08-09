@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="./jquery-1.12.4.js"></script>
+<script>
+    //1
+    $(document).ready(function(){
+        alert("hello1")
+    })
+    //2
+    jQuery(document).ready(function(){
+        alert("hello2")
+    })
+    //3(推荐写法)
+    $(function(){
+        alert("hello3")
+    })
+    //4
+    jQuery(function(){
+        alert("hello4")
+    })
+</script>
+<body>
+    
+</body>
+</html>

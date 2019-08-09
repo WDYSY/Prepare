@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    /* var json={  //json里面可以放数字、对象、函数、blabla
+        a:12,
+        b:3,
+        c:'abc',
+        show: function(){
+            alert(this);    //当前方法属于json，所以弹出来的应该是个json的object
+            alert(this.a);
+        }
+    }
+    json.show(); */
+    var json={  //json里面可以放数字、对象、函数、blabla
+        name:'Joann',
+        qq:'584703852',
+        showName: function(){
+            alert(this.name);
+        },
+        showQQ: function(){
+            alert(this.qq);
+        }
+    }
+    json.showName();
+    json.showQQ();
+    /* 缺点：不适合多个对象
+    适合整个程序里只有一个对象，写起来比较简单 */
+</script>
+<body>
+    
+</body>
+</html>

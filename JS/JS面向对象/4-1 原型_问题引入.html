@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var arr1 = new Array(12, 234, 32, 45, 76);
+    var arr2 = new Array(121, 43, 43, 8);
+    arr2.sum = function (){
+        var result = 0;
+        for(var i=0; i<this.length;i++){
+            result+=this[i];
+        }
+        return result;
+    }
+    alert(arr1.sum)
+    alert(arr2.sum)
+    /* 会发现第一个alert会弹出undefined
+    原因，只给arr2这个对象添加了该方法 */
+</script>
+<body>
+    
+</body>
+</html>
