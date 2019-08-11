@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function(){
+        var btn = document.getElementById('btn1');
+        var txt = document.getElementById('txt1');
+        btn.onclick = function(){
+            re = /^\w+@[a-z0-9]+\.[a-z]+$/i; 
+            if(re.test(txt.value)){
+                alert("符合条件")
+            }else{
+                alert('错误的邮箱')
+            }
+        }
+    }
+</script>
+<body>
+    <input type="text" name="" id="txt1"><br>
+    <input type="button" value="校验" id="btn1">
+</body>
+</html>
