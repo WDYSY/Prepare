@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function cal(params){
+        var w = params[1].length;
+        var h = params[2].length;
+        console.log(w,h)
+
+        var count = 0;
+        for(var key1 of params[1]){
+            if(key1>1){
+                count++
+            }
+        }
+        for(var key2 of params[2]){
+            if(key2>1){
+                count++
+            }
+        }
+        var S = w*h*4+4*count;
+        return S;
+        
+        
+    }
+    var a = new Array([2, 2], [2, 1],[1, 1])
+    console.log(cal(a))
+</script>
+<body>
+    
+</body>
+</html>
